@@ -26,7 +26,7 @@ type DeletePayload {
 }
 
 type Query {
-  tasks: [Task]
+  Tasks: [Task]
 }
 
 type Mutation {
