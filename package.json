@@ -2,9 +2,9 @@
   "name": "teambananaserver",
   "version": "1.0.0",
   "description": "",
-  "main": "Index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon src/Index.js"
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
