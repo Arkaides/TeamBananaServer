@@ -1,4 +1,4 @@
-const { Task } = require('./task');
+const { Task } = require('./Task');
 
 module.exports = {
   Task,
