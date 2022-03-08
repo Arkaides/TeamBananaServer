@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Arkaides/TeamBananaServer#readme",
   "dependencies": {
+    "apollo-server": "^3.6.3",
+    "apollo-server-core": "^3.6.3",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.3",
     "nodemon": "^2.0.15"
   }
 }
