@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Arkaides/TeamBananaServer#readme",
   "dependencies": {
     "apollo-server": "^3.6.6",
+    "apollo-server-core": "^3.6.6",
     "apollo-server-errors": "^3.3.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
