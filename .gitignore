@@ -1,2 +1,9 @@
 node_modules
 .env
+.idea
+/data
+/prisma/migrations
+yarn-error.log
+package-lock.json
+/schema.graphql
+.graphqlconfig
