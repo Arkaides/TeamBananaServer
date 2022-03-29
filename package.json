@@ -1,27 +1,30 @@
 {
-  "name": "teambananaserver",
+  "name": "testserverbanana",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# TestServerBanana\"",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arkaides/TeamBananaServer.git"
+    "url": "git+https://github.com/DenZv95/TestServerBanana.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Arkaides/TeamBananaServer/issues"
+    "url": "https://github.com/DenZv95/TestServerBanana/issues"
   },
-  "homepage": "https://github.com/Arkaides/TeamBananaServer#readme",
+  "homepage": "https://github.com/DenZv95/TestServerBanana#readme",
   "dependencies": {
-    "apollo-server": "^3.6.3",
-    "apollo-server-core": "^3.6.3",
+    "apollo-server": "^3.6.6",
+    "apollo-server-errors": "^3.3.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
-    "mongoose": "^6.2.3",
+    "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.8",
     "nodemon": "^2.0.15"
   }
 }
