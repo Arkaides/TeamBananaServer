@@ -42,21 +42,25 @@ module.exports = {
     async loginUser(_, { loginInput: { email, password } }) {
       const user = await User.findOne({ email });
 
-      if (user && (await bcrypt.compare(password, user.password))) {
-        const token = jwt.sign(
-          { user_id: user._id, email },
-          process.env.USER_SECRET,
-          {
-            expiresIn: "2h",
-          }
-        );
-        user.token = token;
-        return {
-          id: user.id,
-          ...user._doc,
-        };
+      if (user) {
+        if (await bcrypt.compare(password, user.password)) {
+          const token = jwt.sign(
+            { user_id: user._id, email },
+            process.env.USER_SECRET,
+            {
+              expiresIn: "2h",
+            }
+          );
+          user.token = token;
+          return {
+            id: user.id,
+            ...user._doc,
+          };
+        } else {
+          throw new ApolloError("Incorrect password", "INCORRECT_PASSWORD");
+        }
       } else {
-        throw new ApolloError("Incorrect password", "INCORRECT_PASSWORD");
+        throw new ApolloError("not found user", "NOT_FOUND_USER");
       }
     },
   },
