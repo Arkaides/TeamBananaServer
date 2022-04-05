@@ -19,6 +19,6 @@ module.exports = {
     },
   },
   Query: {
-    task: (_, { ID }) => Task.findById(ID),
+    task: async (_, { ID }) => Task.findOne(ID),
   },
 };
