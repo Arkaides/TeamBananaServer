@@ -15,7 +15,7 @@ module.exports = gql`
   }
   input TaskInput {
     text: String
-    username: String
+    email: String
     checked: Boolean
     deadline: String
   }
@@ -27,6 +27,9 @@ module.exports = gql`
   input LoginInput {
     email: String
     password: String
+  }
+  input TaskWhereInput {
+    createdBy: String
   }
   type Query {
     task(id: ID!): Task
