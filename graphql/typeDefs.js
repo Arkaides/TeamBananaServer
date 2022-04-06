@@ -15,7 +15,7 @@ module.exports = gql`
   }
   input TaskInput {
     text: String
-    username: String
+    email: String
     checked: Boolean
     deadline: String
   }
@@ -28,8 +28,12 @@ module.exports = gql`
     email: String
     password: String
   }
+  input TaskWhereInput {
+    createdBy: String
+  }
   type Query {
     task(id: ID!): Task
+    findManyTask(where: TaskWhereInput): [Task!]
     user(id: ID!): User
   }
   type Mutation {
