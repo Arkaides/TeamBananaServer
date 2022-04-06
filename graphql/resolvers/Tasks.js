@@ -20,5 +20,6 @@ module.exports = {
   },
   Query: {
     task: async (_, { ID }) => Task.findOne(ID),
+    findManyTask: async (_, { where }) => Task.find(where),
   },
 };

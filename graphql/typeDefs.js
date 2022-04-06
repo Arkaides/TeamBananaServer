@@ -33,6 +33,7 @@ module.exports = gql`
   }
   type Query {
     task(id: ID!): Task
+    findManyTask(where: TaskWhereInput): [Task!]
     user(id: ID!): User
   }
   type Mutation {
