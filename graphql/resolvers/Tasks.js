@@ -5,13 +5,13 @@ module.exports = {
     async createTask(_, { taskInput: { text, createdBy, deadline, checked } }) {
       const newTask = new Task({
         text: text,
-        createdBy: createdBy,
-        deadline: deadline,
+        createdBy: createdBy.toLowerCase(),
         checked: checked,
+        deadline: deadline,
       });
 
       const res = await newTask.save();
-      console.log(res);
+
       return {
         id: res.id,
         ...res._doc,
