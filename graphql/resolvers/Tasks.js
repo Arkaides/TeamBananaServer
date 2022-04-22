@@ -5,7 +5,7 @@ module.exports = {
     async createTask(_, { taskInput: { text, createdBy, deadline, checked } }) {
       const newTask = new Task({
         text: text,
-        createdBy: createdBy.toLowerCase(),
+        createdBy: createdBy,
         checked: checked,
         deadline: deadline,
       });
