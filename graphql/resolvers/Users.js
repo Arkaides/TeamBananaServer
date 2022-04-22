@@ -52,6 +52,7 @@ module.exports = {
             }
           );
           user.token = token;
+          await user.save();
           return {
             id: user.id,
             ...user._doc,
@@ -65,6 +66,7 @@ module.exports = {
     },
   },
   Query: {
-    user: (_, { ID }) => User.findById(ID),
+    user: async (_, { ID }) => User.findById(ID),
+    easyCheckToken: async (_, { where }) => User.findOne(where),
   },
 };
