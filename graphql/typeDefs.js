@@ -40,6 +40,7 @@ module.exports = gql`
   }
   type Mutation {
     createTask(taskInput: TaskInput): Task!
+    updateTask(id: ID!, taskInput: TaskInput): Task!
     registerUser(registerInput: RegisterInput): User
     loginUser(loginInput: LoginInput): User
   }
