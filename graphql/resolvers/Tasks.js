@@ -17,6 +17,12 @@ module.exports = {
         ...res._doc,
       };
     },
+    async updateTask(_, { id, taskInput }) {
+      return await Task.findByIdAndUpdate(id, taskInput);
+    },
+    async removeTask(_, { id }) {
+      return await Task.findByIdAndDelete(id);
+    },
   },
   Query: {
     task: async (_, { ID }) => Task.findOne(ID),
