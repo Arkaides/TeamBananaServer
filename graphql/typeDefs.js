@@ -17,7 +17,7 @@ module.exports = gql`
   }
   input TaskInput {
     text: String
-    email: String
+    createdBy: String
     checked: Boolean
     deadline: String
   }

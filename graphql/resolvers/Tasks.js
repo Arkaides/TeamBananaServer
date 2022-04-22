@@ -2,12 +2,12 @@ const Task = require("../../models/Task");
 
 module.exports = {
   Mutation: {
-    async createTask(_, { taskInput: { text, email } }) {
+    async createTask(_, { taskInput: { text, createdBy, deadline, checked } }) {
       const newTask = new Task({
         text: text,
-        createdBy: email,
-        deadline: new Date().toISOString(),
-        checked: false,
+        createdBy: createdBy,
+        deadline: deadline,
+        checked: checked,
       });
 
       const res = await newTask.save();
