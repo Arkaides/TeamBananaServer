@@ -33,10 +33,14 @@ module.exports = gql`
   input TaskWhereInput {
     createdBy: String
   }
+  input TokenWhereInput {
+    token: String
+  }
   type Query {
     task(id: ID!): Task
     findManyTask(where: TaskWhereInput): [Task!]
     user(id: ID!): User
+    easyCheckToken(where: TokenWhereInput): User
   }
   type Mutation {
     createTask(taskInput: TaskInput): Task!
